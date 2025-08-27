@@ -1,9 +1,9 @@
 import { type Metadata } from "next";
 import { type PropsWithChildren } from "react";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { ReactQueryProvider } from "../components/ReactQueryProvider";
 import { ThemeProvider } from "../components/ThemeProvider";
+import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -11,19 +11,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Boilerplate",
+  title: "Flowsight",
 };
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} overflow-hidden antialiased`}>
         <ReactQueryProvider>
           {/* prettier-ignore */}
           <ThemeProvider 
             attribute="class" 
-            defaultTheme="system" 
-            enableSystem 
+            defaultTheme="system"
+            enableSystem
             disableTransitionOnChange
           >
             {children}
