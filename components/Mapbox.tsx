@@ -37,7 +37,7 @@ export const Mapbox: FunctionComponent<MapboxProps> = ({
     return () => {
       mapRef.current?.remove();
     };
-  }, []);
+  }, [accessToken, center]);
 
   return <div id="map-container" ref={mapContainer} />;
 };

@@ -1,5 +1,4 @@
 import { Mapbox } from "@/components/Mapbox";
-import { Button } from "@/components/ui/Button";
 import { createEnv } from "@/utils/createEnv";
 
 export default function MapPage() {
